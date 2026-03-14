@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{64E68819-9835-43BE-9B4E-F80DFC7A6D87}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>ReselvaAula.FormLogin</StartupObject>
+    <StartupObject>ReselvaAula.Views.FormLogin</StartupObject>
     <RootNamespace>ReselvaAula</RootNamespace>
     <AssemblyName>ReselvaAula</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -99,39 +99,39 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConfig.vb" />
-    <Compile Include="AuthService.vb" />
-    <Compile Include="FormLogin.vb">
+    <Compile Include="Controllers\AuthService.vb" />
+    <Compile Include="Views\FormLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.vb">
+    <Compile Include="Views\FormLogin.Designer.vb">
       <DependentUpon>FormLogin.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.vb">
+    <Compile Include="Views\FormMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.vb">
+    <Compile Include="Views\FormMain.Designer.vb">
       <DependentUpon>FormMain.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormReserva.vb">
+    <Compile Include="Views\FormReserva.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormReserva.Designer.vb">
+    <Compile Include="Views\FormReserva.Designer.vb">
       <DependentUpon>FormReserva.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormListadoReservas.vb">
+    <Compile Include="Views\FormListadoReservas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormListadoReservas.Designer.vb">
+    <Compile Include="Views\FormListadoReservas.Designer.vb">
       <DependentUpon>FormListadoReservas.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRecursos.vb">
+    <Compile Include="Views\FormRecursos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRecursos.Designer.vb">
+    <Compile Include="Views\FormRecursos.Designer.vb">
       <DependentUpon>FormRecursos.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -150,10 +150,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Recurso.vb" />
-    <Compile Include="Reserva.vb" />
-    <Compile Include="ReservaService.vb" />
-    <Compile Include="Usuario.vb" />
+    <Compile Include="Models\Recurso.vb" />
+    <Compile Include="Models\Reserva.vb" />
+    <Compile Include="Controllers\ReservaService.vb" />
+    <Compile Include="Models\Usuario.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
