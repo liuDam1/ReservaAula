@@ -8,6 +8,14 @@ Namespace Views
         Private _client As Client
         Private _recursoSeleccionado As Recurso = Nothing
 
+        ' Clase auxiliar para mostrar el nombre del tipo en el DataGridView
+        Private Class RecursoViewModel
+            Public Property Id As Long
+            Public Property Nombre As String
+            Public Property TipoId As Long?
+            Public Property TipoNombre As String
+        End Class
+
         Public Sub New(client As Client)
             InitializeComponent()
             _client = client
@@ -51,14 +59,34 @@ Namespace Views
 
         Private Async Function CargarRecursos() As Task
             Try
-                Dim res = Await _client.Table(Of Recurso)().Order(Function(r) r.Id, Constants.Ordering.Ascending).Get()
-                dgvRecursos.DataSource = res.Models
+                ' 1. Cargar Tipos para mapear nombres
+                Dim resTipos = Await _client.Table(Of Tipo)().Get()
+                Dim tiposDict = resTipos.Models.ToDictionary(Function(t) t.Id, Function(t) t.Nombre)
+
+                ' Cargar ComboBox
+                cboTipo.DataSource = resTipos.Models
+                cboTipo.DisplayMember = "Nombre"
+                cboTipo.ValueMember = "Id"
+                cboTipo.SelectedIndex = -1
+
+                ' 2. Cargar Recursos
+                Dim resRecursos = Await _client.Table(Of Recurso)().Order(Function(r) r.Id, Constants.Ordering.Ascending).Get()
                 
-                ' ✅ Ocultar columnas internas de BaseModel de Supabase
-                If dgvRecursos.Columns.Contains("BaseUrl") Then dgvRecursos.Columns("BaseUrl").Visible = False
-                If dgvRecursos.Columns.Contains("RequestClientOptions") Then dgvRecursos.Columns("RequestClientOptions").Visible = False
-                If dgvRecursos.Columns.Contains("TableName") Then dgvRecursos.Columns("TableName").Visible = False
-                If dgvRecursos.Columns.Contains("PrimaryKey") Then dgvRecursos.Columns("PrimaryKey").Visible = False
+                ' 3. Mapear a ViewModel para mostrar nombres en lugar de IDs
+                Dim viewModels = resRecursos.Models.Select(Function(r) New RecursoViewModel With {
+                    .Id = r.Id,
+                    .Nombre = r.Nombre,
+                    .TipoId = r.Tipo,
+                    .TipoNombre = If(r.Tipo.HasValue AndAlso tiposDict.ContainsKey(r.Tipo.Value), tiposDict(r.Tipo.Value), "Sin Tipo")
+                }).ToList()
+
+                dgvRecursos.DataSource = viewModels
+                
+                ' Configurar columnas
+                If dgvRecursos.Columns.Contains("TipoId") Then dgvRecursos.Columns("TipoId").Visible = False
+                If dgvRecursos.Columns.Contains("Id") Then dgvRecursos.Columns("Id").Width = 50
+                If dgvRecursos.Columns.Contains("Nombre") Then dgvRecursos.Columns("Nombre").Width = 150
+                If dgvRecursos.Columns.Contains("TipoNombre") Then dgvRecursos.Columns("TipoNombre").HeaderText = "Tipo"
                 
                 ' Estilo de grid
                 dgvRecursos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
@@ -71,9 +99,9 @@ Namespace Views
 
         Private Async Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
             Dim nombre = txtNombre.Text.Trim()
-            Dim tipo = cboTipo.Text.Trim()
+            Dim tipoId = If(cboTipo.SelectedValue IsNot Nothing, DirectCast(cboTipo.SelectedValue, Long), 0)
 
-            If String.IsNullOrEmpty(nombre) OrElse String.IsNullOrEmpty(tipo) Then
+            If String.IsNullOrEmpty(nombre) OrElse tipoId = 0 Then
                 MsgBox("Por favor completa todos los campos")
                 Return
             End If
@@ -81,12 +109,11 @@ Namespace Views
             Try
                 Dim nuevoRecurso = New Recurso With {
                     .Nombre = nombre,
-                    .Tipo = tipo
+                    .Tipo = tipoId
                 }
                 Await _client.Table(Of Recurso)().Insert(nuevoRecurso)
                 MsgBox("Recurso creado con éxito")
-                txtNombre.Clear()
-                cboTipo.SelectedIndex = -1
+                LimpiarFormulario()
                 Await CargarRecursos()
             Catch ex As Exception
                 MsgBox("Error al crear recurso: " & ex.Message)
@@ -99,11 +126,19 @@ Namespace Views
 
         Private Sub dgvRecursos_SelectionChanged(sender As Object, e As EventArgs) Handles dgvRecursos.SelectionChanged
             If dgvRecursos.SelectedRows.Count > 0 Then
-                _recursoSeleccionado = DirectCast(dgvRecursos.SelectedRows(0).DataBoundItem, Recurso)
+                Dim row = dgvRecursos.SelectedRows(0)
+                Dim viewModel = DirectCast(row.DataBoundItem, RecursoViewModel)
                 
-                If _recursoSeleccionado IsNot Nothing Then
+                If viewModel IsNot Nothing Then
+                    ' Crear objeto Recurso para edición
+                    _recursoSeleccionado = New Recurso With {
+                        .Id = viewModel.Id,
+                        .Nombre = viewModel.Nombre,
+                        .Tipo = viewModel.TipoId
+                    }
+
                     txtNombre.Text = _recursoSeleccionado.Nombre
-                    cboTipo.SelectedItem = _recursoSeleccionado.Tipo
+                    cboTipo.SelectedValue = _recursoSeleccionado.Tipo
                     
                     ' Cambiar a modo edición
                     lblSubtitle.Text = "Editar Recurso"
@@ -135,16 +170,16 @@ Namespace Views
             If _recursoSeleccionado Is Nothing Then Return
 
             Dim nombre = txtNombre.Text.Trim()
-            Dim tipo = cboTipo.Text.Trim()
+            Dim tipoId = If(cboTipo.SelectedValue IsNot Nothing, DirectCast(cboTipo.SelectedValue, Long), 0)
 
-            If String.IsNullOrEmpty(nombre) OrElse String.IsNullOrEmpty(tipo) Then
+            If String.IsNullOrEmpty(nombre) OrElse tipoId = 0 Then
                 MsgBox("Por favor completa todos los campos")
                 Return
             End If
 
             Try
                 _recursoSeleccionado.Nombre = nombre
-                _recursoSeleccionado.Tipo = tipo
+                _recursoSeleccionado.Tipo = tipoId
                 
                 Await _client.Table(Of Recurso)().Filter("id", Constants.Operator.Equals, _recursoSeleccionado.Id).Update(_recursoSeleccionado)
                 

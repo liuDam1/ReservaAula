@@ -1,6 +1,6 @@
 Namespace Views
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-    Partial Class FormRecursos
+    Partial Class FormTipos
         Inherits System.Windows.Forms.Form
 
         <System.Diagnostics.DebuggerNonUserCode()>
@@ -19,19 +19,17 @@ Namespace Views
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Me.lblTitle = New System.Windows.Forms.Label()
-            Me.dgvRecursos = New System.Windows.Forms.DataGridView()
+            Me.dgvTipos = New System.Windows.Forms.DataGridView()
             Me.panelAdd = New System.Windows.Forms.Panel()
             Me.btnLimpiar = New System.Windows.Forms.Button()
             Me.btnEliminar = New System.Windows.Forms.Button()
             Me.btnModificar = New System.Windows.Forms.Button()
             Me.btnGuardar = New System.Windows.Forms.Button()
-            Me.cboTipo = New System.Windows.Forms.ComboBox()
-            Me.lblTipo = New System.Windows.Forms.Label()
             Me.txtNombre = New System.Windows.Forms.TextBox()
             Me.lblNombre = New System.Windows.Forms.Label()
             Me.lblSubtitle = New System.Windows.Forms.Label()
             Me.btnRefrescar = New System.Windows.Forms.Button()
-            CType(Me.dgvRecursos, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.dgvTipos, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.panelAdd.SuspendLayout()
             Me.SuspendLayout()
             '
@@ -43,28 +41,28 @@ Namespace Views
             Me.lblTitle.Location = New System.Drawing.Point(51, 36)
             Me.lblTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.lblTitle.Name = "lblTitle"
-            Me.lblTitle.Size = New System.Drawing.Size(314, 45)
+            Me.lblTitle.Size = New System.Drawing.Size(432, 45)
             Me.lblTitle.TabIndex = 0
-            Me.lblTitle.Text = "Gestión de Recursos"
+            Me.lblTitle.Text = "Gestión de Tipos de Recurso"
             '
-            'dgvRecursos
+            'dgvTipos
             '
-            Me.dgvRecursos.AllowUserToAddRows = False
-            Me.dgvRecursos.AllowUserToDeleteRows = False
-            Me.dgvRecursos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Me.dgvTipos.AllowUserToAddRows = False
+            Me.dgvTipos.AllowUserToDeleteRows = False
+            Me.dgvTipos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-            Me.dgvRecursos.BackgroundColor = System.Drawing.Color.White
-            Me.dgvRecursos.BorderStyle = System.Windows.Forms.BorderStyle.None
-            Me.dgvRecursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-            Me.dgvRecursos.Location = New System.Drawing.Point(51, 108)
-            Me.dgvRecursos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-            Me.dgvRecursos.Name = "dgvRecursos"
-            Me.dgvRecursos.ReadOnly = True
-            Me.dgvRecursos.RowHeadersWidth = 62
-            Me.dgvRecursos.RowTemplate.Height = 25
-            Me.dgvRecursos.Size = New System.Drawing.Size(450, 504)
-            Me.dgvRecursos.TabIndex = 1
+            Me.dgvTipos.BackgroundColor = System.Drawing.Color.White
+            Me.dgvTipos.BorderStyle = System.Windows.Forms.BorderStyle.None
+            Me.dgvTipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+            Me.dgvTipos.Location = New System.Drawing.Point(51, 108)
+            Me.dgvTipos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.dgvTipos.Name = "dgvTipos"
+            Me.dgvTipos.ReadOnly = True
+            Me.dgvTipos.RowHeadersWidth = 62
+            Me.dgvTipos.RowTemplate.Height = 25
+            Me.dgvTipos.Size = New System.Drawing.Size(450, 504)
+            Me.dgvTipos.TabIndex = 1
             '
             'panelAdd
             '
@@ -75,8 +73,6 @@ Namespace Views
             Me.panelAdd.Controls.Add(Me.btnEliminar)
             Me.panelAdd.Controls.Add(Me.btnModificar)
             Me.panelAdd.Controls.Add(Me.btnGuardar)
-            Me.panelAdd.Controls.Add(Me.cboTipo)
-            Me.panelAdd.Controls.Add(Me.lblTipo)
             Me.panelAdd.Controls.Add(Me.txtNombre)
             Me.panelAdd.Controls.Add(Me.lblNombre)
             Me.panelAdd.Controls.Add(Me.lblSubtitle)
@@ -94,7 +90,7 @@ Namespace Views
             Me.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnLimpiar.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
             Me.btnLimpiar.ForeColor = System.Drawing.Color.White
-            Me.btnLimpiar.Location = New System.Drawing.Point(30, 376)
+            Me.btnLimpiar.Location = New System.Drawing.Point(30, 340)
             Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.btnLimpiar.Name = "btnLimpiar"
             Me.btnLimpiar.Size = New System.Drawing.Size(237, 42)
@@ -110,7 +106,7 @@ Namespace Views
             Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnEliminar.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
             Me.btnEliminar.ForeColor = System.Drawing.Color.White
-            Me.btnEliminar.Location = New System.Drawing.Point(30, 326)
+            Me.btnEliminar.Location = New System.Drawing.Point(30, 290)
             Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.btnEliminar.Name = "btnEliminar"
             Me.btnEliminar.Size = New System.Drawing.Size(237, 42)
@@ -126,7 +122,7 @@ Namespace Views
             Me.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnModificar.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
             Me.btnModificar.ForeColor = System.Drawing.Color.White
-            Me.btnModificar.Location = New System.Drawing.Point(30, 277)
+            Me.btnModificar.Location = New System.Drawing.Point(30, 241)
             Me.btnModificar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.btnModificar.Name = "btnModificar"
             Me.btnModificar.Size = New System.Drawing.Size(237, 42)
@@ -142,37 +138,17 @@ Namespace Views
             Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
             Me.btnGuardar.ForeColor = System.Drawing.Color.White
-            Me.btnGuardar.Location = New System.Drawing.Point(30, 228)
+            Me.btnGuardar.Location = New System.Drawing.Point(30, 192)
             Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.btnGuardar.Name = "btnGuardar"
             Me.btnGuardar.Size = New System.Drawing.Size(237, 42)
             Me.btnGuardar.TabIndex = 5
-            Me.btnGuardar.Text = "Añadir Recurso"
+            Me.btnGuardar.Text = "Añadir Tipo"
             Me.btnGuardar.UseVisualStyleBackColor = False
-            '
-            'cboTipo
-            '
-            Me.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-            Me.cboTipo.FormattingEnabled = True
-            Me.cboTipo.Location = New System.Drawing.Point(30, 168)
-            Me.cboTipo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-            Me.cboTipo.Name = "cboTipo"
-            Me.cboTipo.Size = New System.Drawing.Size(235, 26)
-            Me.cboTipo.TabIndex = 4
-            '
-            'lblTipo
-            '
-            Me.lblTipo.AutoSize = True
-            Me.lblTipo.Location = New System.Drawing.Point(30, 144)
-            Me.lblTipo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-            Me.lblTipo.Name = "lblTipo"
-            Me.lblTipo.Size = New System.Drawing.Size(44, 18)
-            Me.lblTipo.TabIndex = 3
-            Me.lblTipo.Text = "Tipo"
             '
             'txtNombre
             '
-            Me.txtNombre.Location = New System.Drawing.Point(30, 96)
+            Me.txtNombre.Location = New System.Drawing.Point(30, 132)
             Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.txtNombre.Name = "txtNombre"
             Me.txtNombre.Size = New System.Drawing.Size(235, 28)
@@ -181,7 +157,7 @@ Namespace Views
             'lblNombre
             '
             Me.lblNombre.AutoSize = True
-            Me.lblNombre.Location = New System.Drawing.Point(30, 72)
+            Me.lblNombre.Location = New System.Drawing.Point(30, 108)
             Me.lblNombre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.lblNombre.Name = "lblNombre"
             Me.lblNombre.Size = New System.Drawing.Size(62, 18)
@@ -195,9 +171,9 @@ Namespace Views
             Me.lblSubtitle.Location = New System.Drawing.Point(26, 24)
             Me.lblSubtitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.lblSubtitle.Name = "lblSubtitle"
-            Me.lblSubtitle.Size = New System.Drawing.Size(149, 28)
+            Me.lblSubtitle.Size = New System.Drawing.Size(118, 28)
             Me.lblSubtitle.TabIndex = 0
-            Me.lblSubtitle.Text = "Nuevo Recurso"
+            Me.lblSubtitle.Text = "Nuevo Tipo"
             '
             'btnRefrescar
             '
@@ -215,7 +191,7 @@ Namespace Views
             Me.btnRefrescar.Text = "Actualizar"
             Me.btnRefrescar.UseVisualStyleBackColor = False
             '
-            'FormRecursos
+            'FormTipos
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -223,13 +199,13 @@ Namespace Views
             Me.ClientSize = New System.Drawing.Size(874, 660)
             Me.Controls.Add(Me.btnRefrescar)
             Me.Controls.Add(Me.panelAdd)
-            Me.Controls.Add(Me.dgvRecursos)
+            Me.Controls.Add(Me.dgvTipos)
             Me.Controls.Add(Me.lblTitle)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
             Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-            Me.Name = "FormRecursos"
-            Me.Text = "Gestión de Recursos"
-            CType(Me.dgvRecursos, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.Name = "FormTipos"
+            Me.Text = "Gestión de Tipos de Recurso"
+            CType(Me.dgvTipos, System.ComponentModel.ISupportInitialize).EndInit()
             Me.panelAdd.ResumeLayout(False)
             Me.panelAdd.PerformLayout()
             Me.ResumeLayout(False)
@@ -238,14 +214,12 @@ Namespace Views
         End Sub
 
         Friend WithEvents lblTitle As Label
-        Friend WithEvents dgvRecursos As DataGridView
+        Friend WithEvents dgvTipos As DataGridView
         Friend WithEvents panelAdd As Panel
         Friend WithEvents btnGuardar As Button
         Friend WithEvents btnModificar As Button
         Friend WithEvents btnEliminar As Button
         Friend WithEvents btnLimpiar As Button
-        Friend WithEvents cboTipo As ComboBox
-        Friend WithEvents lblTipo As Label
         Friend WithEvents txtNombre As TextBox
         Friend WithEvents lblNombre As Label
         Friend WithEvents lblSubtitle As Label

@@ -19,6 +19,7 @@ Namespace Views
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Me.panelSidebar = New System.Windows.Forms.Panel()
+            Me.btnGestionTipos = New System.Windows.Forms.Button()
             Me.btnLogout = New System.Windows.Forms.Button()
             Me.btnVerReservas = New System.Windows.Forms.Button()
             Me.btnGestionRecursos = New System.Windows.Forms.Button()
@@ -35,15 +36,35 @@ Namespace Views
             '
             Me.panelSidebar.BackColor = System.Drawing.Color.FromArgb(33, 37, 41)
             Me.panelSidebar.Controls.Add(Me.btnLogout)
-            Me.panelSidebar.Controls.Add(Me.btnVerReservas)
+            Me.panelSidebar.Controls.Add(Me.btnGestionTipos)
             Me.panelSidebar.Controls.Add(Me.btnGestionRecursos)
             Me.panelSidebar.Controls.Add(Me.btnNuevaReserva)
+            Me.panelSidebar.Controls.Add(Me.btnVerReservas)
             Me.panelSidebar.Controls.Add(Me.panelUser)
             Me.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left
             Me.panelSidebar.Location = New System.Drawing.Point(0, 0)
             Me.panelSidebar.Name = "panelSidebar"
             Me.panelSidebar.Size = New System.Drawing.Size(220, 600)
             Me.panelSidebar.TabIndex = 0
+            '
+            'btnGestionTipos
+            '
+            Me.btnGestionTipos.BackColor = System.Drawing.Color.Transparent
+            Me.btnGestionTipos.Cursor = System.Windows.Forms.Cursors.Hand
+            Me.btnGestionTipos.Dock = System.Windows.Forms.DockStyle.Top
+            Me.btnGestionTipos.FlatAppearance.BorderSize = 0
+            Me.btnGestionTipos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(73, 80, 87)
+            Me.btnGestionTipos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnGestionTipos.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+            Me.btnGestionTipos.ForeColor = System.Drawing.Color.White
+            Me.btnGestionTipos.Location = New System.Drawing.Point(0, 250)
+            Me.btnGestionTipos.Name = "btnGestionTipos"
+            Me.btnGestionTipos.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
+            Me.btnGestionTipos.Size = New System.Drawing.Size(220, 50)
+            Me.btnGestionTipos.TabIndex = 5
+            Me.btnGestionTipos.Text = "Gestión de Tipos"
+            Me.btnGestionTipos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.btnGestionTipos.UseVisualStyleBackColor = False
             '
             'btnLogout
             '
@@ -184,6 +205,7 @@ Namespace Views
         Friend WithEvents btnLogout As Button
         Friend WithEvents btnVerReservas As Button
         Friend WithEvents btnGestionRecursos As Button
+        Friend WithEvents btnGestionTipos As Button
         Friend WithEvents btnNuevaReserva As Button
         Friend WithEvents panelUser As Panel
         Friend WithEvents lblDepto As Label

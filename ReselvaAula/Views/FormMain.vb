@@ -26,7 +26,7 @@ Namespace Views
             lblDepto.ForeColor = Color.FromArgb(160, 174, 192)
             
             ' Estilo de botones del Sidebar
-            Dim navButtons = {btnNuevaReserva, btnVerReservas, btnGestionRecursos, btnLogout}
+            Dim navButtons = {btnVerReservas, btnNuevaReserva, btnGestionRecursos, btnGestionTipos, btnLogout}
             For Each btn In navButtons
                 btn.FlatStyle = FlatStyle.Flat
                 btn.FlatAppearance.BorderSize = 0
@@ -42,23 +42,28 @@ Namespace Views
             btnVerReservas_Click(Nothing, Nothing)
         End Sub
 
+        ' Solo UNA definición para btnNuevaReserva_Click
         Private Sub btnNuevaReserva_Click(sender As Object, e As EventArgs) Handles btnNuevaReserva.Click
-            AbrirFormularioHijo(New FormReserva(_usuario, _client))
+            AbrirFormulario(New FormReserva(_usuario, _client))
         End Sub
 
         Private Sub btnVerReservas_Click(sender As Object, e As EventArgs) Handles btnVerReservas.Click
-            AbrirFormularioHijo(New FormListadoReservas(_client, _usuario))
+            AbrirFormulario(New FormListadoReservas(_client, _usuario))
         End Sub
 
         Private Sub btnGestionRecursos_Click(sender As Object, e As EventArgs) Handles btnGestionRecursos.Click
-            AbrirFormularioHijo(New FormRecursos(_client))
+            AbrirFormulario(New FormRecursos(_client))
+        End Sub
+
+        Private Sub btnGestionTipos_Click(sender As Object, e As EventArgs) Handles btnGestionTipos.Click
+            AbrirFormulario(New FormTipos(_client))
         End Sub
 
         Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
             Application.Restart()
         End Sub
 
-        Private Sub AbrirFormularioHijo(formHijo As Form)
+        Private Sub AbrirFormulario(formHijo As Form)
             panelContent.Controls.Clear()
             formHijo.TopLevel = False
             formHijo.FormBorderStyle = FormBorderStyle.None

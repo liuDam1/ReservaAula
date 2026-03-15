@@ -1,10 +1,9 @@
 Imports Supabase.Postgrest.Attributes
 Imports Supabase.Postgrest.Models
 
-' Modelo que coincide con tu tabla "Recursos" en Supabase
 Namespace Models
-    <Table("Recursos")>
-    Public Class Recurso
+    <Table("Tipo")>
+    Public Class Tipo
         Inherits BaseModel
 
         <PrimaryKey("id")>
@@ -13,7 +12,8 @@ Namespace Models
         <Column("Nombre")>
         Public Property Nombre As String
 
-        <Column("Tipo")>
-        Public Property Tipo As Long?
+        Public Overrides Function ToString() As String
+            Return Nombre
+        End Function
     End Class
 End Namespace

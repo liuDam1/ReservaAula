@@ -2,6 +2,7 @@ Imports Supabase.Postgrest
 Imports ReselvaAula.Models
 Imports ReselvaAula.Controllers
 Imports System.Windows.Forms
+Imports System.Linq
 
 Namespace Views
     Public Class FormDetalleReserva
@@ -11,6 +12,7 @@ Namespace Views
         Private _client As Client
         Private _usuarioLogueado As Usuario
         Private _reservaService As ReservaService
+        Private _tipoNombre As String = ""
 
         Public Sub New(reservaView As Object, client As Client, usuarioLogueado As Usuario)
             InitializeComponent()
@@ -19,13 +21,18 @@ Namespace Views
             _usuarioLogueado = usuarioLogueado
             _reservaService = New ReservaService(_client)
             
-            ' Cargar datos
+            ' Cargar datos básicos
             lblReservaVal.Text = _reservaView.Recurso.ToString()
             lblUsuarioVal.Text = _reservaView.Usuario.ToString()
             lblMotivoVal.Text = _reservaView.Motivo.ToString()
             lblDesdeVal.Text = CDate(_reservaView.Inicio).ToString("dd/MM/yyyy")
             lblHastaVal.Text = CDate(_reservaView.Fin).ToString("dd/MM/yyyy")
-            lblTipoVal.Text = _reservaView.Tipo.ToString()
+            
+            ' El tipo se cargará asíncronamente
+            lblTipoVal.Text = "Cargando..."
+            
+            ' Cargar el nombre del tipo
+            CargarNombreTipo()
 
             ' Inicializar controles de edición
             txtMotivo.Text = _reservaView.Motivo.ToString()
@@ -84,6 +91,30 @@ Namespace Views
             
             txtMotivo.BackColor = Color.White
             txtMotivo.BorderStyle = BorderStyle.FixedSingle
+        End Sub
+
+        Private Async Sub CargarNombreTipo()
+            Try
+                ' Obtener el ID del tipo desde _reservaView.Tipo
+                Dim tipoId As Integer
+                If Integer.TryParse(_reservaView.Tipo.ToString(), tipoId) Then
+                    ' Buscar el tipo por ID
+                    Dim response = Await _client.Table(Of Tipo)().Filter("id", Constants.Operator.Equals, tipoId).Get()
+                    Dim tipo = response.Models.FirstOrDefault()
+                    
+                    If tipo IsNot Nothing Then
+                        _tipoNombre = tipo.Nombre
+                        lblTipoVal.Text = tipo.Nombre
+                    Else
+                        lblTipoVal.Text = "Tipo no encontrado"
+                    End If
+                Else
+                    lblTipoVal.Text = _reservaView.Tipo.ToString()
+                End If
+            Catch ex As Exception
+                lblTipoVal.Text = "Error al cargar tipo"
+                ' Opcional: MsgBox("Error al cargar nombre del tipo: " & ex.Message)
+            End Try
         End Sub
 
         Private Async Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click

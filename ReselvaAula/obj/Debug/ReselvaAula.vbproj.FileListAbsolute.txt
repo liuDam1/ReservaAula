@@ -21,7 +21,6 @@ D:\A-Visual 2026\ReselvaAula\ReselvaAula\bin\Debug\Supabase.Postgrest.xml
 D:\A-Visual 2026\ReselvaAula\ReselvaAula\bin\Debug\System.Buffers.xml
 D:\A-Visual 2026\ReselvaAula\ReselvaAula\bin\Debug\System.Memory.xml
 D:\A-Visual 2026\ReselvaAula\ReselvaAula\bin\Debug\System.Numerics.Vectors.xml
-D:\A-Visual 2026\ReselvaAula\ReselvaAula\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\A-Visual 2026\ReselvaAula\ReselvaAula\obj\Debug\ReselvaA.54D575A9.Up2Date
 D:\A-Visual 2026\ReselvaAula\ReselvaAula\obj\Debug\ReselvaAula.exe
 D:\A-Visual 2026\ReselvaAula\ReselvaAula\obj\Debug\ReselvaAula.xml
@@ -31,3 +30,5 @@ D:\A-Visual 2026\ReselvaAula\ReselvaAula\bin\Debug\ReselvaAula.exe.manifest
 D:\A-Visual 2026\ReselvaAula\ReselvaAula\bin\Debug\ReselvaAula.application
 D:\A-Visual 2026\ReselvaAula\ReselvaAula\obj\Debug\ReselvaAula.exe.manifest
 D:\A-Visual 2026\ReselvaAula\ReselvaAula\obj\Debug\ReselvaAula.application
+D:\A-Visual 2026\ReselvaAula\ReselvaAula\obj\Debug\ReselvaAula.Views.FormTipos.resources
+D:\A-Visual 2026\ReselvaAula\ReselvaAula\obj\Debug\ReselvaAula.Views.FormRecursos.resources
