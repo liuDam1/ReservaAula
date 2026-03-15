@@ -74,12 +74,12 @@ Namespace Views
             Me.btnVerReservas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnVerReservas.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
             Me.btnVerReservas.ForeColor = System.Drawing.Color.White
-            Me.btnVerReservas.Location = New System.Drawing.Point(0, 150)
+            Me.btnVerReservas.Location = New System.Drawing.Point(0, 100)
             Me.btnVerReservas.Name = "btnVerReservas"
             Me.btnVerReservas.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
             Me.btnVerReservas.Size = New System.Drawing.Size(220, 50)
             Me.btnVerReservas.TabIndex = 2
-            Me.btnVerReservas.Text = "Ver Todas las Reservas"
+            Me.btnVerReservas.Text = "Toda las reservas"
             Me.btnVerReservas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
             Me.btnVerReservas.UseVisualStyleBackColor = False
             '
@@ -112,7 +112,7 @@ Namespace Views
             Me.btnNuevaReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnNuevaReserva.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
             Me.btnNuevaReserva.ForeColor = System.Drawing.Color.White
-            Me.btnNuevaReserva.Location = New System.Drawing.Point(0, 100)
+            Me.btnNuevaReserva.Location = New System.Drawing.Point(0, 150)
             Me.btnNuevaReserva.Name = "btnNuevaReserva"
             Me.btnNuevaReserva.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
             Me.btnNuevaReserva.Size = New System.Drawing.Size(220, 50)

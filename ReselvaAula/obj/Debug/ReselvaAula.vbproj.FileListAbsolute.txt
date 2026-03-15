@@ -26,3 +26,8 @@ D:\A-Visual 2026\ReselvaAula\ReselvaAula\obj\Debug\ReselvaA.54D575A9.Up2Date
 D:\A-Visual 2026\ReselvaAula\ReselvaAula\obj\Debug\ReselvaAula.exe
 D:\A-Visual 2026\ReselvaAula\ReselvaAula\obj\Debug\ReselvaAula.xml
 D:\A-Visual 2026\ReselvaAula\ReselvaAula\obj\Debug\ReselvaAula.pdb
+D:\A-Visual 2026\ReselvaAula\ReselvaAula\obj\Debug\ReselvaAula.Views.FormLogin.resources
+D:\A-Visual 2026\ReselvaAula\ReselvaAula\bin\Debug\ReselvaAula.exe.manifest
+D:\A-Visual 2026\ReselvaAula\ReselvaAula\bin\Debug\ReselvaAula.application
+D:\A-Visual 2026\ReselvaAula\ReselvaAula\obj\Debug\ReselvaAula.exe.manifest
+D:\A-Visual 2026\ReselvaAula\ReselvaAula\obj\Debug\ReselvaAula.application

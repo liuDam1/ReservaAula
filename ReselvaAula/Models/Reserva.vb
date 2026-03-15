@@ -17,10 +17,10 @@ Namespace Models
         Public Property IdRecurso As Long
 
         <Column("FechaInicio")> 
-        Public Property FechaInicio As DateTime
+        Public Property FechaInicio As String
 
         <Column("FechaFin")>
-        Public Property FechaFin As DateTime
+        Public Property FechaFin As String
 
         <Column("Motivo")>
         Public Property Motivo As String

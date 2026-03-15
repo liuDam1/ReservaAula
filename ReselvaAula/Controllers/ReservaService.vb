@@ -21,14 +21,22 @@ Namespace Controllers
             End Try
         End Function
 
-        Public Async Function ExisteConflicto(idRecurso As Long, fechaInicio As DateTime, fechaFin As DateTime) As Task(Of Boolean)
+        Public Async Function ExisteConflicto(idRecurso As Long, fechaInicio As DateTime, fechaFin As DateTime, Optional idReservaAExcluir As Long? = Nothing) As Task(Of Boolean)
             Try
-                ' ✅ Ajustado a los nombres de tu captura y usando ID para conflictos
-                Dim reservas = Await _client.Table(Of Reserva)() _
+                ' ✅ Convertimos a string ISO para el filtro
+                Dim strInicio = fechaInicio.ToString("yyyy-MM-dd")
+                Dim strFin = fechaFin.ToString("yyyy-MM-dd")
+
+                Dim query = _client.Table(Of Reserva)() _
                     .Filter("id_recurso", Constants.Operator.Equals, idRecurso) _
-                    .Filter("FechaInicio", Constants.Operator.LessThan, fechaFin) _
-                    .Filter("FechaFin", Constants.Operator.GreaterThan, fechaInicio) _
-                    .Get()
+                    .Filter("FechaInicio", Constants.Operator.LessThan, strFin) _
+                    .Filter("FechaFin", Constants.Operator.GreaterThan, strInicio)
+
+                If idReservaAExcluir.HasValue Then
+                    query = query.Filter("id", Constants.Operator.NotEqual, idReservaAExcluir.Value)
+                End If
+
+                Dim reservas = Await query.Get()
                 Return reservas.Models.Count > 0
             Catch ex As Exception
                 MsgBox("Error al verificar conflictos: " & ex.Message)
@@ -37,8 +45,8 @@ Namespace Controllers
         End Function
 
         Public Async Function CrearReserva(idUsuario As Long, idRecurso As Long, fechaInicio As DateTime, fechaFin As DateTime, motivo As String) As Task(Of Boolean)
-            If fechaFin <= fechaInicio Then
-                MsgBox("Fecha fin debe ser posterior a fecha inicio")
+            If fechaFin < fechaInicio Then
+                MsgBox("Fecha fin debe ser posterior o igual a fecha inicio")
                 Return False
             End If
 
@@ -48,12 +56,12 @@ Namespace Controllers
             End If
 
             Try
-                ' ✅ Guarda por IDs de Usuario y Recurso
+                ' ✅ Guardamos como string ISO "yyyy-MM-dd" para evitar desfases UTC
                 Dim reserva = New Reserva With {
                     .IdUsuario = idUsuario,
                     .IdRecurso = idRecurso,
-                    .FechaInicio = fechaInicio,
-                    .FechaFin = fechaFin,
+                    .FechaInicio = fechaInicio.ToString("yyyy-MM-dd"),
+                    .FechaFin = fechaFin.ToString("yyyy-MM-dd"),
                     .Motivo = motivo
                 }
                 Await _client.Table(Of Reserva)().Insert(reserva)

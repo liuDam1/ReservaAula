@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "D:\\A-Visual 2026\\ReselvaAula\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|d:\\a-visual 2026\\reselvaaula\\reselvaaula\\views\\formlistadoreservas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|solutionrelative:reselvaaula\\views\\formlistadoreservas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|d:\\a-visual 2026\\reselvaaula\\reselvaaula\\views\\formrecursos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|solutionrelative:reselvaaula\\views\\formrecursos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|D:\\A-Visual 2026\\ReselvaAula\\reselvaaula\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|solutionrelative:reselvaaula\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|D:\\A-Visual 2026\\ReselvaAula\\reselvaaula\\views\\formreserva.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|solutionrelative:reselvaaula\\views\\formreserva.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|D:\\A-Visual 2026\\ReselvaAula\\reselvaaula\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|solutionrelative:reselvaaula\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|D:\\A-Visual 2026\\ReselvaAula\\reselvaaula\\views\\formlistadoreservas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|solutionrelative:reselvaaula\\views\\formlistadoreservas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|D:\\A-Visual 2026\\ReselvaAula\\reselvaaula\\views\\formdetallereserva.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|solutionrelative:reselvaaula\\views\\formdetallereserva.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|D:\\A-Visual 2026\\ReselvaAula\\reselvaaula\\views\\formmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|solutionrelative:reselvaaula\\views\\formmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|D:\\A-Visual 2026\\ReselvaAula\\reselvaaula\\views\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|solutionrelative:reselvaaula\\views\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|D:\\A-Visual 2026\\ReselvaAula\\reselvaaula\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|solutionrelative:reselvaaula\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64E68819-9835-43BE-9B4E-F80DFC7A6D87}|ReselvaAula\\ReselvaAula.vbproj|D:\\A-Visual 2026\\ReselvaAula\\reselvaaula\\appconfig.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
@@ -79,122 +99,47 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormListadoReservas.vb [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Views\\FormListadoReservas.vb",
-              "RelativeDocumentMoniker": "ReselvaAula\\Views\\FormListadoReservas.vb",
-              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Views\\FormListadoReservas.vb [Dise\u00F1o]",
-              "RelativeToolTip": "ReselvaAula\\Views\\FormListadoReservas.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-03-14T12:54:41.554Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FormReserva.vb [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormReserva.vb",
-              "RelativeDocumentMoniker": "ReselvaAula\\FormReserva.vb",
-              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormReserva.vb [Dise\u00F1o]",
-              "RelativeToolTip": "ReselvaAula\\FormReserva.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-03-14T12:43:42.624Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "FormRecursos.vb [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormRecursos.vb",
-              "RelativeDocumentMoniker": "ReselvaAula\\FormRecursos.vb",
-              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormRecursos.vb [Dise\u00F1o]",
-              "RelativeToolTip": "ReselvaAula\\FormRecursos.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Views\\FormRecursos.vb",
+              "RelativeDocumentMoniker": "ReselvaAula\\Views\\FormRecursos.vb",
+              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Views\\FormRecursos.vb [Dise\u00F1o]",
+              "RelativeToolTip": "ReselvaAula\\Views\\FormRecursos.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-03-14T12:43:39.729Z",
+              "WhenOpened": "2026-03-15T01:54:44.498Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FormMain.vb [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormMain.vb",
-              "RelativeDocumentMoniker": "ReselvaAula\\FormMain.vb",
-              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormMain.vb [Dise\u00F1o]",
-              "RelativeToolTip": "ReselvaAula\\FormMain.vb [Dise\u00F1o]",
+              "DocumentIndex": 4,
+              "Title": "FormDetalleReserva.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Views\\FormDetalleReserva.vb",
+              "RelativeDocumentMoniker": "ReselvaAula\\Views\\FormDetalleReserva.vb",
+              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Views\\FormDetalleReserva.vb [Dise\u00F1o]",
+              "RelativeToolTip": "ReselvaAula\\Views\\FormDetalleReserva.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-03-14T03:11:08.95Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FormListadoReservas.vb [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormListadoReservas.vb",
-              "RelativeDocumentMoniker": "ReselvaAula\\FormListadoReservas.vb",
-              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormListadoReservas.vb [Dise\u00F1o]",
-              "RelativeToolTip": "ReselvaAula\\FormListadoReservas.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-03-14T03:11:07.093Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-03-15T01:24:14.107Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "packages.config",
-              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\packages.config",
-              "RelativeDocumentMoniker": "ReselvaAula\\packages.config",
-              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\packages.config",
-              "RelativeToolTip": "ReselvaAula\\packages.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-03-14T01:30:29.832Z"
+              "Title": "FormReserva.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Views\\FormReserva.vb",
+              "RelativeDocumentMoniker": "ReselvaAula\\Views\\FormReserva.vb",
+              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Views\\FormReserva.vb [Dise\u00F1o]",
+              "RelativeToolTip": "ReselvaAula\\Views\\FormReserva.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-03-15T01:54:51.395Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Recurso.vb",
-              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Recurso.vb",
-              "RelativeDocumentMoniker": "ReselvaAula\\Recurso.vb",
-              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Recurso.vb",
-              "RelativeToolTip": "ReselvaAula\\Recurso.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "FormMain.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Views\\FormMain.vb",
+              "RelativeDocumentMoniker": "ReselvaAula\\Views\\FormMain.vb",
+              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Views\\FormMain.vb [Dise\u00F1o]",
+              "RelativeToolTip": "ReselvaAula\\Views\\FormMain.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-03-14T01:28:03.091Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FormLogin.vb [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormLogin.vb",
-              "RelativeDocumentMoniker": "ReselvaAula\\FormLogin.vb",
-              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormLogin.vb [Dise\u00F1o]",
-              "RelativeToolTip": "ReselvaAula\\FormLogin.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-03-14T02:14:04.023Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AppConfig.vb",
-              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\AppConfig.vb",
-              "RelativeDocumentMoniker": "ReselvaAula\\AppConfig.vb",
-              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\AppConfig.vb",
-              "RelativeToolTip": "ReselvaAula\\AppConfig.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-03-14T01:26:25.532Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AuthService.vb",
-              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\AuthService.vb",
-              "RelativeDocumentMoniker": "ReselvaAula\\AuthService.vb",
-              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\AuthService.vb",
-              "RelativeToolTip": "ReselvaAula\\AuthService.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvygAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-03-14T01:29:13.75Z"
+              "WhenOpened": "2026-03-15T01:54:47.898Z"
             },
             {
               "$type": "Document",
@@ -211,7 +156,132 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "FormListadoReservas.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Views\\FormListadoReservas.vb",
+              "RelativeDocumentMoniker": "ReselvaAula\\Views\\FormListadoReservas.vb",
+              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Views\\FormListadoReservas.vb [Dise\u00F1o]",
+              "RelativeToolTip": "ReselvaAula\\Views\\FormListadoReservas.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-03-14T12:54:41.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormLogin.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Views\\FormLogin.vb",
+              "RelativeDocumentMoniker": "ReselvaAula\\Views\\FormLogin.vb",
+              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Views\\FormLogin.vb [Dise\u00F1o]",
+              "RelativeToolTip": "ReselvaAula\\Views\\FormLogin.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-03-15T01:51:31.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormReserva.vb",
+              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormReserva.vb",
+              "RelativeDocumentMoniker": "ReselvaAula\\FormReserva.vb",
+              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormReserva.vb",
+              "RelativeToolTip": "ReselvaAula\\FormReserva.vb",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-03-14T12:43:42.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormRecursos.vb",
+              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormRecursos.vb",
+              "RelativeDocumentMoniker": "ReselvaAula\\FormRecursos.vb",
+              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormRecursos.vb",
+              "RelativeToolTip": "ReselvaAula\\FormRecursos.vb",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-03-14T12:43:39.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormMain.vb",
+              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormMain.vb",
+              "RelativeDocumentMoniker": "ReselvaAula\\FormMain.vb",
+              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormMain.vb",
+              "RelativeToolTip": "ReselvaAula\\FormMain.vb",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-03-14T03:11:08.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FormListadoReservas.vb",
+              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormListadoReservas.vb",
+              "RelativeDocumentMoniker": "ReselvaAula\\FormListadoReservas.vb",
+              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormListadoReservas.vb",
+              "RelativeToolTip": "ReselvaAula\\FormListadoReservas.vb",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-03-14T03:11:07.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "packages.config",
+              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\packages.config",
+              "RelativeDocumentMoniker": "ReselvaAula\\packages.config",
+              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\packages.config",
+              "RelativeToolTip": "ReselvaAula\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-03-14T01:30:29.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Recurso.vb",
+              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Recurso.vb",
+              "RelativeDocumentMoniker": "ReselvaAula\\Recurso.vb",
+              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Recurso.vb",
+              "RelativeToolTip": "ReselvaAula\\Recurso.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-03-14T01:28:03.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormLogin.vb",
+              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormLogin.vb",
+              "RelativeDocumentMoniker": "ReselvaAula\\FormLogin.vb",
+              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\FormLogin.vb",
+              "RelativeToolTip": "ReselvaAula\\FormLogin.vb",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-03-14T02:14:04.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppConfig.vb",
+              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\AppConfig.vb",
+              "RelativeDocumentMoniker": "ReselvaAula\\AppConfig.vb",
+              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\AppConfig.vb",
+              "RelativeToolTip": "ReselvaAula\\AppConfig.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-03-14T01:26:25.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AuthService.vb",
+              "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\AuthService.vb",
+              "RelativeDocumentMoniker": "ReselvaAula\\AuthService.vb",
+              "ToolTip": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\AuthService.vb",
+              "RelativeToolTip": "ReselvaAula\\AuthService.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvygAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-03-14T01:29:13.75Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Form1.vb",
               "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Form1.vb",
               "RelativeDocumentMoniker": "ReselvaAula\\Form1.vb",
@@ -223,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "ReservaService.vb",
               "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\ReservaService.vb",
               "RelativeDocumentMoniker": "ReselvaAula\\ReservaService.vb",
@@ -235,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "Usuario.vb",
               "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Usuario.vb",
               "RelativeDocumentMoniker": "ReselvaAula\\Usuario.vb",
@@ -247,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "Reserva.vb",
               "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Reserva.vb",
               "RelativeDocumentMoniker": "ReselvaAula\\Reserva.vb",
@@ -259,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Form1.Designer.vb",
               "DocumentMoniker": "D:\\A-Visual 2026\\ReselvaAula\\ReselvaAula\\Form1.Designer.vb",
               "RelativeDocumentMoniker": "ReselvaAula\\Form1.Designer.vb",

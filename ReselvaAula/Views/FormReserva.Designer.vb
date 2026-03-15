@@ -70,7 +70,7 @@ Namespace Views
             '
             'dtpFechaInicio
             '
-            Me.dtpFechaInicio.CustomFormat = "dd/MM/yyyy HH:mm"
+            Me.dtpFechaInicio.CustomFormat = "dd/MM/yyyy"
             Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpFechaInicio.Location = New System.Drawing.Point(45, 180)
             Me.dtpFechaInicio.Name = "dtpFechaInicio"
@@ -85,15 +85,17 @@ Namespace Views
             Me.lblFechaFin.Size = New System.Drawing.Size(57, 15)
             Me.lblFechaFin.TabIndex = 5
             Me.lblFechaFin.Text = "Fecha Fin"
+            Me.lblFechaFin.Visible = True
             '
             'dtpFechaFin
             '
-            Me.dtpFechaFin.CustomFormat = "dd/MM/yyyy HH:mm"
+            Me.dtpFechaFin.CustomFormat = "dd/MM/yyyy"
             Me.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom
             Me.dtpFechaFin.Location = New System.Drawing.Point(45, 250)
             Me.dtpFechaFin.Name = "dtpFechaFin"
             Me.dtpFechaFin.Size = New System.Drawing.Size(200, 23)
             Me.dtpFechaFin.TabIndex = 6
+            Me.dtpFechaFin.Visible = True
             '
             'lblMotivo
             '

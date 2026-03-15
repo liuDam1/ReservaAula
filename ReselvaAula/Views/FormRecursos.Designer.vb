@@ -22,6 +22,9 @@ Namespace Views
             Me.dgvRecursos = New System.Windows.Forms.DataGridView()
             Me.panelAdd = New System.Windows.Forms.Panel()
             Me.btnGuardar = New System.Windows.Forms.Button()
+            Me.btnModificar = New System.Windows.Forms.Button()
+            Me.btnEliminar = New System.Windows.Forms.Button()
+            Me.btnLimpiar = New System.Windows.Forms.Button()
             Me.cboTipo = New System.Windows.Forms.ComboBox()
             Me.lblTipo = New System.Windows.Forms.Label()
             Me.txtNombre = New System.Windows.Forms.TextBox()
@@ -65,6 +68,9 @@ Namespace Views
             Me.panelAdd.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                 Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.panelAdd.BackColor = System.Drawing.Color.FromArgb(248, 249, 250)
+            Me.panelAdd.Controls.Add(Me.btnLimpiar)
+            Me.panelAdd.Controls.Add(Me.btnEliminar)
+            Me.panelAdd.Controls.Add(Me.btnModificar)
             Me.panelAdd.Controls.Add(Me.btnGuardar)
             Me.panelAdd.Controls.Add(Me.cboTipo)
             Me.panelAdd.Controls.Add(Me.lblTipo)
@@ -90,6 +96,51 @@ Namespace Views
             Me.btnGuardar.TabIndex = 5
             Me.btnGuardar.Text = "Añadir Recurso"
             Me.btnGuardar.UseVisualStyleBackColor = False
+            '
+            'btnModificar
+            '
+            Me.btnModificar.BackColor = System.Drawing.Color.FromArgb(0, 123, 255)
+            Me.btnModificar.FlatAppearance.BorderSize = 0
+            Me.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnModificar.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
+            Me.btnModificar.ForeColor = System.Drawing.Color.White
+            Me.btnModificar.Location = New System.Drawing.Point(23, 231)
+            Me.btnModificar.Name = "btnModificar"
+            Me.btnModificar.Size = New System.Drawing.Size(184, 35)
+            Me.btnModificar.TabIndex = 6
+            Me.btnModificar.Text = "Guardar Cambios"
+            Me.btnModificar.UseVisualStyleBackColor = False
+            Me.btnModificar.Visible = False
+            '
+            'btnEliminar
+            '
+            Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(220, 53, 69)
+            Me.btnEliminar.FlatAppearance.BorderSize = 0
+            Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnEliminar.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
+            Me.btnEliminar.ForeColor = System.Drawing.Color.White
+            Me.btnEliminar.Location = New System.Drawing.Point(23, 272)
+            Me.btnEliminar.Name = "btnEliminar"
+            Me.btnEliminar.Size = New System.Drawing.Size(184, 35)
+            Me.btnEliminar.TabIndex = 7
+            Me.btnEliminar.Text = "Eliminar"
+            Me.btnEliminar.UseVisualStyleBackColor = False
+            Me.btnEliminar.Visible = False
+            '
+            'btnLimpiar
+            '
+            Me.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(108, 117, 125)
+            Me.btnLimpiar.FlatAppearance.BorderSize = 0
+            Me.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnLimpiar.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
+            Me.btnLimpiar.ForeColor = System.Drawing.Color.White
+            Me.btnLimpiar.Location = New System.Drawing.Point(23, 313)
+            Me.btnLimpiar.Name = "btnLimpiar"
+            Me.btnLimpiar.Size = New System.Drawing.Size(184, 35)
+            Me.btnLimpiar.TabIndex = 8
+            Me.btnLimpiar.Text = "Cancelar / Limpiar"
+            Me.btnLimpiar.UseVisualStyleBackColor = False
+            Me.btnLimpiar.Visible = False
             '
             'cboTipo
             '
@@ -176,6 +227,9 @@ Namespace Views
         Friend WithEvents dgvRecursos As DataGridView
         Friend WithEvents panelAdd As Panel
         Friend WithEvents btnGuardar As Button
+        Friend WithEvents btnModificar As Button
+        Friend WithEvents btnEliminar As Button
+        Friend WithEvents btnLimpiar As Button
         Friend WithEvents cboTipo As ComboBox
         Friend WithEvents lblTipo As Label
         Friend WithEvents txtNombre As TextBox

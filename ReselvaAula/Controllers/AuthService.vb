@@ -27,10 +27,10 @@ Namespace Controllers
             End Try
         End Function
 
-        Public Async Function IniciarSesion(email As String, password As String) As Task(Of Usuario)
+        Public Async Function IniciarSesion(nombreUsuario As String, password As String) As Task(Of Usuario)
             Try
-                ' ✅ Cambio a .Filter para mayor estabilidad en VB.NET y evitar error de BaseModel
-                Dim res = Await _client.Table(Of Usuario)().Filter("Email", Constants.Operator.Equals, email).Single()
+                ' ✅ Ahora iniciamos sesión por Nombre de usuario
+                Dim res = Await _client.Table(Of Usuario)().Filter("Nombre", Constants.Operator.Equals, nombreUsuario).Single()
                 
                 If res IsNot Nothing AndAlso BCrypt.Net.BCrypt.Verify(password, res.Password) Then
                     Return res

@@ -12,13 +12,43 @@ Namespace Views
 
         Public Sub New()
             InitializeComponent()
-            ' Configuración inicial de UI moderna
-            Me.BackColor = Color.FromArgb(240, 244, 248)
-            ' ... etc ...
+            ' Configuración inicial de UI moderna y elegante
+            Me.BackColor = Color.FromArgb(242, 245, 249) ' Fondo suave
+            Me.Text = "Reserva Aula - Acceso"
+            
             panelContainer.BackColor = Color.White
-            btnAction.BackColor = Color.FromArgb(0, 102, 204)
+            panelContainer.BorderStyle = BorderStyle.None ' Quitamos el borde para usar una sombra o estilo más limpio
+            
+            ' Título
+            lblTitle.ForeColor = Color.FromArgb(45, 55, 72)
+            lblTitle.Font = New Font("Segoe UI Semibold", 22.0!, FontStyle.Bold)
+            
+            ' Etiquetas
+            Dim labels = {lblUsuario, lblPassword, lblRepeatPassword, lblEmail, lblDepartamento}
+            For Each lbl In labels
+                lbl.ForeColor = Color.FromArgb(74, 85, 104)
+                lbl.Font = New Font("Segoe UI", 9.0!, FontStyle.Bold)
+            Next
+            
+            ' Campos de texto (estilo moderno)
+            Dim textboxes = {txtUsuario, txtPassword, txtRepeatPassword, txtEmail, txtDepartamento}
+            For Each txt In textboxes
+                txt.BackColor = Color.FromArgb(247, 250, 252)
+                txt.BorderStyle = BorderStyle.FixedSingle
+                txt.Font = New Font("Segoe UI", 10.5!)
+            Next
+            
+            ' Botón Principal (Azul Profundo con bordes redondeados simulados por flatstyle)
+            btnAction.BackColor = Color.FromArgb(49, 130, 206)
             btnAction.ForeColor = Color.White
-            lblTitle.ForeColor = Color.FromArgb(33, 37, 41)
+            btnAction.FlatStyle = FlatStyle.Flat
+            btnAction.FlatAppearance.BorderSize = 0
+            btnAction.Font = New Font("Segoe UI", 11.0!, FontStyle.Bold)
+            btnAction.Cursor = Cursors.Hand
+            
+            ' Enlace inferior
+            lblSwitch.ForeColor = Color.FromArgb(49, 130, 206)
+            lblSwitch.Font = New Font("Segoe UI", 9.0!, FontStyle.Bold Or FontStyle.Underline)
             
             ' Inicializar Supabase
             Try
@@ -38,39 +68,53 @@ Namespace Views
                 lblTitle.Text = "Crear Cuenta"
                 btnAction.Text = "Registrar"
                 lblSwitch.Text = "¿Ya tienes cuenta? Inicia sesión"
-                txtNombre.Visible = True
+                txtEmail.Visible = True
+                lblEmail.Visible = True
                 txtDepartamento.Visible = True
-                lblNombre.Visible = True
                 lblDepartamento.Visible = True
+                lblRepeatPassword.Visible = True
+                txtRepeatPassword.Visible = True
+                
+                lblUsuario.Text = "Nombre de Usuario"
             Else
                 lblTitle.Text = "Bienvenido"
                 btnAction.Text = "Iniciar Sesión"
                 lblSwitch.Text = "¿No tienes cuenta? Regístrate"
-                txtNombre.Visible = False
+                txtEmail.Visible = False
+                lblEmail.Visible = False
                 txtDepartamento.Visible = False
-                lblNombre.Visible = False
                 lblDepartamento.Visible = False
+                lblRepeatPassword.Visible = False
+                txtRepeatPassword.Visible = False
+                
+                lblUsuario.Text = "Usuario"
             End If
         End Sub
 
         Private Async Sub btnAction_Click(sender As Object, e As EventArgs) Handles btnAction.Click
-            Dim email = txtEmail.Text.Trim()
+            Dim usuarioStr = txtUsuario.Text.Trim()
             Dim password = txtPassword.Text.Trim()
 
-            If String.IsNullOrEmpty(email) OrElse String.IsNullOrEmpty(password) Then
+            If String.IsNullOrEmpty(usuarioStr) OrElse String.IsNullOrEmpty(password) Then
                 MsgBox("Por favor completa los campos obligatorios")
                 Return
             End If
 
             If _isRegistering Then
-                Dim nombre = txtNombre.Text.Trim()
+                Dim repeatPassword = txtRepeatPassword.Text.Trim()
+                If password <> repeatPassword Then
+                    MsgBox("Las contraseñas no coinciden")
+                    Return
+                End If
+
+                Dim email = txtEmail.Text.Trim()
                 Dim depto = txtDepartamento.Text.Trim()
-                If Await _authService.Registrar(nombre, password, depto, email) Then
+                If Await _authService.Registrar(usuarioStr, password, depto, email) Then
                     MsgBox("Registro exitoso. Ahora puedes iniciar sesión.")
                     lblSwitch_Click(Nothing, Nothing)
                 End If
             Else
-                Dim usuario = Await _authService.IniciarSesion(email, password)
+                Dim usuario = Await _authService.IniciarSesion(usuarioStr, password)
                 If usuario IsNot Nothing Then
                     ' Guardar usuario global o pasar a FormMain
                     Dim mainForm = New FormMain(usuario, _client)
@@ -79,6 +123,16 @@ Namespace Views
                 Else
                     MsgBox("Credenciales incorrectas")
                 End If
+            End If
+        End Sub
+
+        Private Sub chkShowPassword_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPassword.CheckedChanged
+            If chkShowPassword.Checked Then
+                txtPassword.PasswordChar = ControlChars.NullChar
+                txtRepeatPassword.PasswordChar = ControlChars.NullChar
+            Else
+                txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
+                txtRepeatPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
             End If
         End Sub
     End Class
